@@ -31,8 +31,6 @@ def LDL_analysis(LDL_int):
         answer = "High"
     elif 190 <= LDL_int:
         answer = "Very High"
-    else:
-        answer = "Low"
     return answer
 
 def LDL_output(LDL_value, LDL_analy):
