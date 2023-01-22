@@ -35,8 +35,5 @@ def LDL_analysis(LDL_int):
 
 def LDL_output(LDL_value, LDL_analy):
     print("The LDL result of {} is considered {}".format(LDL_value, LDL_analy))
-    
-def HDL_output(HDL_value, HDL_analy):
-    print("The HDL result of [] is considered []".format(HDL_value, HDL_analy))
 
 interface()
