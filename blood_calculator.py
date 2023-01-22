@@ -32,6 +32,6 @@ def HDL_analysis(HDL_int):
     return answer
 
 def HDL_output(HDL_value, HDL_analy):
-    print("The HDL result of [] is considered []".format(HDL_value, HDL_analy))
+    print("The HDL result of {} is considered {}".format(HDL_value, HDL_analy))
 
 interface()
