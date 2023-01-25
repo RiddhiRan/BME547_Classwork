@@ -4,12 +4,18 @@ def interface():
     while keep_running:
         print("Options")
         print("1 - Cholestrol")
+        print("2 - HDL")
+        print("3 - LDL")
         print("9 - Quit")
         choice = input("Select an option")
         if choice == "9":
             keep_running = False
         elif choice == "1":
             cholestrol_driver()
+        elif choice =="2":
+            HDL_driver()
+        elif choice == "3":
+            LDL_driver()
     print("Program ending") 
 
 def cholestrol_driver():
@@ -33,22 +39,6 @@ def cholestrol_analysis(cholestrol_int):
 
 def cholestrol_output(cholestrol_value, cholestrol_analy):
     print("The Cholestrol result of {} is considered {}".format(cholestrol_value, cholestrol_analy))
-
-interface()
-
-def interface():
-    print("Blood calculator")
-    keep_running =True
-    while keep_running:
-        print("Options")
-        print("1 - LDL")
-        print("9 - Quit")
-        choice = input("Select an option")
-        if choice == "9":
-            keep_running = False
-        elif choice == "1":
-            LDL_driver()
-    print("Program ending") 
 
 def LDL_driver():
     LDL_in = LDL_input()
@@ -74,22 +64,6 @@ def LDL_analysis(LDL_int):
 def LDL_output(LDL_value, LDL_analy):
     print("The LDL result of {} is considered {}".format(LDL_value, LDL_analy))
 
-interface()
-
-def interface():
-    print("Blood calculator")
-    keep_running =True
-    while keep_running:
-        print("Options")
-        print("1 - HDL")
-        print("9 - Quit")
-        choice = input("Select an option")
-        if choice == "9":
-            keep_running = False
-        elif choice == "1":
-            HDL_driver()
-    print("Program ending") 
-
 def HDL_driver():
     HDL_in = HDL_input()
     HDL_analy = HDL_analysis(HDL_in)
@@ -112,4 +86,5 @@ def HDL_analysis(HDL_int):
 def HDL_output(HDL_value, HDL_analy):
     print("The HDL result of {} is considered {}".format(HDL_value, HDL_analy))
 
-interface()
+if __name__ == "__main__":
+    interface()
