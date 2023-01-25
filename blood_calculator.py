@@ -86,4 +86,5 @@ def HDL_analysis(HDL_int):
 def HDL_output(HDL_value, HDL_analy):
     print("The HDL result of {} is considered {}".format(HDL_value, HDL_analy))
 
-interface()
+if __name__ == "__main__":
+    interface()
