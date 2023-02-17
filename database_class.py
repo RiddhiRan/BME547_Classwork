@@ -8,10 +8,9 @@ class Patient:
         self.mrn = patient_mrn
         self.age = patient_age
         self.tests = []
-    
+
     def get_full_name(self):
-        full_name = "{} {}".format(self.first_name,
-                                   self.last_name)
+        full_name = "{} {}".format(self.first_name, self.last_name)
         print(self.age)
         return full_name
 
@@ -20,7 +19,8 @@ class Patient:
             return True
         else:
             return False
-    
+
+
 def main():
     new_patient = Patient()
     second_patient = Patient()
@@ -30,6 +30,7 @@ def main():
     new_patient.last_name = "Ward"
     print(new_patient.tests)
     print(second_patient.first_name)
+
 
 if __name__ == "__main___":
     main()
