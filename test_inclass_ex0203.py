@@ -32,3 +32,28 @@ def test_find_y(x, m, c, expected):
     answer = find_y(x, m, c)
     # Assert
     assert answer == expected
+
+
+@pytest.mark.parametrize("coord1, coord2, x, expected",
+                         [((1, 2), (3, 2), 7, 2),
+                          ((1, 1), (2, 2), 3, 3)
+                          ])
+def test_find_coordinate(coord1, coord2, x, expected):
+    from inclass_ex0203 import find_coordinate
+    answer = find_coordinate(coord1, coord2, x)
+    # Assert
+    assert answer == expected
+
+
+# Additional Work
+@pytest.mark.parametrize("coord1, coord2, coord3, expected",
+                         [((1, 2), (3, 2), (7, 3), False),
+                          ((1, 3), (2, 7), (3, 11), True),
+                          ((1, 1), (2, 2), (3, 3), True),
+                          ((1, 2), (2, 4), (2, 5), False)
+                          ])
+def test_check_line_validity(coord1, coord2, coord3, expected):
+    from inclass_ex0203 import check_line_validity
+    answer = check_line_validity(coord1, coord2, coord3)
+    # Assert
+    assert answer == expected
