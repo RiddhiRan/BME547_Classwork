@@ -11,3 +11,7 @@ def server_status():
 @app.route("/info", methods=["GET"])
 def info_route():
     return "This server was written for BME547"
+
+
+if __name__ == "__main__":
+    app.run()
